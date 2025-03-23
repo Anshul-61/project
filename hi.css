@@ -1,0 +1,11 @@
+/* logo of website*/
+.logo{
+    position:fixed;
+    bottom:0px;
+    right:0px;
+    z-index: 4;
+    height:10%
+}
+.background_color{
+    
+}
