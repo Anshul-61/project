@@ -32,6 +32,32 @@ background-color: red;
     right:50%;
     height:20%;
 }
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+header .logo h1 {
+    font-size: 24px;
+}
 
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
 
