@@ -6,32 +6,84 @@
     z-index: 99;
     height:10%
 }
-/*bmi calculator */
-.button_num{
-width: 100%;
-border: none;
-text-align: center;
-font-size: 2em;
-font-weight: bold;
-border-radius: 10px;
-background-color: red;
-}
-.textarea{
-    width: 100%;
-    font-size: 1em;
-    border-radius: 10px;
-    border:0px solid black;
-    background-color: white;
-}
-.div1{
-    position:relative;
+/* BMI Calculator */
+.bmi-calculator {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
     text-align: center;
-    top: 50%;
-    left:50%;
-    bottom:50%;
-    right:50%;
-    height:20%;
-}
+  }
+  
+  .bmi-calculator h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .bmi-calculator label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .bmi-calculator input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .bmi-result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+  }
+  .bmi-result span {
+    color: #4CAF50; 
+  }
+  
+  .bmi-result.underweight span {
+    color: #FF9800;  
+  }
+  
+  .bmi-result.normal span {
+    color: #4CAF50; 
+  }
+  
+  .bmi-result.overweight span {
+    color: #FF5722;  
+  }
+  
+  .bmi-result.obese span {
+    color: #F44336;  
+  }
+  @media (max-width: 600px) {
+    .bmi-calculator {
+      padding: 20px;
+      max-width: 100%;
+    }
+  
+    .bmi-calculator h2 {
+      font-size: 20px;
+    }
+  
+    .bmi-calculator input {
+      font-size: 14px;
+    }
+  
+    .bmi-result {
+      font-size: 16px;
+    }
+  }
+  
 /* Header */
 header {
     background-color: #4CAF50;

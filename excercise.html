@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excercise</title>
     <link rel="stylesheet" type="text/css" href="hi.css">
+    <script src="calculator.js"></script>
 </head>
 <body>
     <header>
@@ -22,15 +23,18 @@
             </ul>
         </nav>
     </header>
-
-    <div class="div1">
-        <label>
-        <input type="number" min="1" placeholder="Weight in kg">
-    </label>
-    </div>
-    <div class="div1">
-        <input type="number" min="0" placeholder="Hieght in meter">
-    </div>
+    <main>
+        <section class="bmi-calculator">
+          <h2>BMI Calculator</h2>
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight" placeholder="e.g. 70">
+    
+          <label for="height">Height (cm):</label>
+          <input type="number" id="height" placeholder="e.g. 175">
+          <button id="calculate-bmi-btn">Calculate BMI</button>
+          <div class="bmi-result" id="result">Enter your values above</div>
+        </section>
+      </main>
 </body>
 <footer><img src="https://t4.ftcdn.net/jpg/02/18/46/59/360_F_218465980_2JJETZ9wO9rp2obMr8ANLnX00OTfbpjU.jpg"class="logo"></footer>
 </html>
