@@ -1,178 +1,118 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body and general styling */
+/* Base styles */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
 }
 
-/* Header */
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 2rem;
+    background-color: #3e8e41;
+    color: white;
 }
 
-header .logo h1 {
-    font-size: 24px;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-header nav ul {
-    list-style: none;
+.nav-links {
     display: flex;
+    gap: 1rem;
 }
 
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
+.nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
 }
 
-/* Hero Section */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero section */
 .hero {
-    background-color: #28a745;
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #f4f4f4;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background-color: #3e8e41;
     color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.hero h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.hero .cta-btn {
-    background-color: #ffffff;
-    color: #28a745;
+    border-radius: 5px;
     text-decoration: none;
-    padding: 10px 30px;
-    border-radius: 30px;
-    font-size: 18px;
 }
 
-/* Nutrition Plans Section */
-.nutrition-plans {
-    padding: 40px 20px;
-    text-align: center;
+/* Plans section */
+.plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
 }
 
-.nutrition-plans h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.plan {
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px 0;
+.plan-card {
+    background-color: #fff;
+    padding: 1.5rem;
     border-radius: 8px;
-}
-
-.plan h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.plan p {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.plan ul {
-    list-style-type: none;
-    margin-bottom: 20px;
-}
-
-.plan ul li {
-    font-size: 16px;
-}
-
-.download-btn {
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    padding: 10px 30px;
-    border-radius: 30px;
-    font-size: 18px;
-}
-
-/* Recipes Section */
-.recipes {
-    padding: 40px 20px;
-    background-color: #f0f0f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
 }
 
-.recipe-category {
-    margin-bottom: 30px;
-}
-
-.recipe-category h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.recipe-category ul {
-    list-style-type: none;
-    margin-bottom: 20px;
-}
-
-.recipe-category ul li {
-    font-size: 16px;
-}
-
-.view-recipes-btn {
-    background-color: #4CAF50;
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    background-color: #3e8e41;
     color: white;
+    border-radius: 4px;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 18px;
 }
 
 /* Footer */
-footer {
-    background-color: #333;
-    color: white;
+.footer {
     text-align: center;
-    padding: 20px;
+    padding: 1rem;
+    background-color: #222;
+    color: #fff;
 }
 
-footer .socials a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-}
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #3e8e41;
+        padding: 1rem;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
 
-footer .socials a:hover {
-    text-decoration: underline;
-}
+    .nav-links.active {
+        display: flex;
+    }
 
-/* logo of website*/
-.logo{
-    position:fixed;
-    bottom:0px;
-    right:0px;
-    z-index: 99;
-    height:10%
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .plans {
+        padding: 1rem;
+    }
 }
