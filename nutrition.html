@@ -56,6 +56,30 @@
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
+
+       
+    // Animate hero on load
+    window.addEventListener("load", () => {
+        document.querySelector(".hero").classList.add("animate");
+    });
+
+    // Animate plan cards on scroll
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    document.querySelectorAll(".plan-card").forEach(card => {
+        observer.observe(card);
+    });
+
+
     </script>
 </body>
 </html>
