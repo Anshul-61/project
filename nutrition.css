@@ -6,6 +6,13 @@ body {
     line-height: 1.6;
 }
 
+/* Layout Container */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -13,6 +20,7 @@ body {
     padding: 1rem 2rem;
     background-color: #3e8e41;
     color: white;
+    position: relative;
 }
 
 .logo {
@@ -23,17 +31,35 @@ body {
 .nav-links {
     display: flex;
     gap: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
+    padding: 0.3rem 0.5rem;
+}
+
+.nav-links a:hover,
+.btn:hover,
+.cta-btn:hover {
+    background-color: #367c39;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid white;
+    font-weight: bold;
 }
 
 .menu-toggle {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
 }
 
 /* Hero section */
@@ -41,6 +67,12 @@ body {
     text-align: center;
     padding: 3rem 1rem;
     background: #f4f4f4;
+    border-bottom: 2px solid #3e8e41;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .cta-btn {
@@ -98,6 +130,8 @@ body {
         top: 60px;
         right: 0;
         width: 200px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        z-index: 999;
     }
 
     .nav-links.active {
