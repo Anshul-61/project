@@ -4,8 +4,17 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #fff;
+    color: #000;
 }
 
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -13,6 +22,7 @@ body {
     padding: 1rem 2rem;
     background-color: #3e8e41;
     color: white;
+    position: relative;
 }
 
 .logo {
@@ -23,17 +33,35 @@ body {
 .nav-links {
     display: flex;
     gap: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
+    padding: 0.3rem 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    background-color: #367c39;
+    border-radius: 4px;
+    outline: none;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid white;
+    font-weight: bold;
 }
 
 .menu-toggle {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
 }
 
 /* Hero section */
@@ -41,6 +69,23 @@ body {
     text-align: center;
     padding: 3rem 1rem;
     background: #f4f4f4;
+    border-bottom: 2px solid #3e8e41;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+
+    /* Initial state for animation */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hero.animate {
+    animation: fadeIn 1s ease forwards;
+    transform: none;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .cta-btn {
@@ -51,6 +96,16 @@ body {
     color: white;
     border-radius: 5px;
     text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+    background-color: #367c39;
+    outline: none;
+    transform: scale(1.03);
 }
 
 /* Plans section */
@@ -67,6 +122,20 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Animation initial state */
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.plan-card.animate {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn {
@@ -77,6 +146,16 @@ body {
     color: white;
     border-radius: 4px;
     text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #367c39;
+    outline: none;
+    transform: scale(1.03);
 }
 
 /* Footer */
@@ -98,6 +177,12 @@ body {
         top: 60px;
         right: 0;
         width: 200px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        z-index: 999;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 0;
     }
 
     .nav-links.active {
@@ -115,4 +200,21 @@ body {
     .plans {
         padding: 1rem;
     }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
