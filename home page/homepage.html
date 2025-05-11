@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <h1>Fitness Hub</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#exercise">Workouts</a></li>
+        <li><a href="#nutrition">Nutrition & Diet</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="start">
+    <h2>Let's Start Your Fitness Journey!</h2>
+    <p>Scroll down to explore workouts and nutrition tips.</p>
+    <a href="#main-content" class="scroll-btn">▼</a>
+  </section>
+
+  <!-- Hover-triggered ghost coupon (just the emoji) -->
+  <div class="hover-trigger" id="hoverTrigger" title="Click to reveal the coupon!">
+    <span class="emoji">🎁</span> 
+    <div class="ghost-coupon" id="ghostCoupon" style="display: none;">
+        <img src="coupan.png" alt="Coupon" width="150" height="auto">
+      <p>You won a free fitness consultation!</p>
+      <button>Claim Now</button>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section id="exercise">
+      <h2>Exercise</h2>
+      <p>Explore customized workout plans and tips.</p>
+      <a href="exercise.html">Go to Exercise Page</a>
+    </section>
+
+    <section id="nutrition">
+      <h2>Nutrition</h2>
+      <p>Learn about healthy eating and meal plans.</p>
+      <a href="nutrition.html">Go to Nutrition Page</a>
+    </section>
+  </main>
+
+  <script src="home-script.js"></script>
+</body>
+</html>
