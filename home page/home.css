@@ -1,0 +1,204 @@
+/* Page background */
+body {
+  background-image: url('background.jpg'); /* Replace with your background image path */
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+}
+
+header .logo img {
+  width: 100px;
+  height: 48px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Start section styling */
+.start {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 50px 0;
+}
+
+.start h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.start p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.scroll-btn {
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* Hover-trigger coupon section */
+.hover-trigger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  z-index: 10000; 
+}
+
+.ghost-coupon {
+  background-color:red;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: none;
+  z-index: 9999; 
+}
+
+
+/* Main content section styling */
+main {
+  padding: 50px 20px;
+}
+
+/* Exercise section styling */
+.exercise-section {
+  background-color: #2e3a45;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.exercise-section h2 {
+  color: #ffcc00;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.exercise-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.exercise-section ul {
+  margin-top: 20px;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.exercise-section ul li {
+  margin-bottom: 10px;
+}
+
+.exercise-section a {
+  color: #ffcc00;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+/* Nutrition section styling */
+.nutrition-section {
+  background-color: #4b5c6b;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nutrition-section h2 {
+  color: #ffcc00;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.nutrition-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.nutrition-section ul {
+  margin-top: 20px;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.nutrition-section ul li {
+  margin-bottom: 10px;
+}
+
+.nutrition-section a {
+  color: #ffcc00;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .start h2 {
+    font-size: 2rem;
+  }
+
+  .start p {
+    font-size: 1rem;
+  }
+
+  .scroll-btn {
+    font-size: 24px;
+  }
+
+  .exercise-section, .nutrition-section {
+    padding: 20px;
+  }
+}

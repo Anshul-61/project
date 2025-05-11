@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise</title>
+    <link rel="stylesheet" type="text/css" href="hi.css">
+    <script src="calculator.js" defer></script>
+</head>
+<body>
+     <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" style="width: 100px; height: 48px;">
+        </div>
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="../home page/homepage.html">Home</a></li>
+                    <li><a href="../excersise/excercise.html">Workouts</a></li>
+                    <li><a href="../nutrition/nutrition.html">Nutrition & Diet</a></li>
+                    <li><a href="../login page/login.html">login</a></li>
+                    <li><a href="../login page/signup.html">Sign Up</a></li>
+                    <li><span id="userDisplay">👤 Guest</span></li> 
+                </ul>
+                <div class="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+ <section class="bmi-section-background">
+            <!-- BMI Calculator -->
+            <section class="bmi-calculator">
+                <h2>BMI Calculator</h2>
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="e.g. 70">
+
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" placeholder="e.g. 175">
+                <button id="calculate-bmi-btn">Calculate BMI</button>
+                <div class="bmi-result" id="result">Enter your values above</div>
+            </section>
+
+            <!-- BMI History -->
+<section class="bmi-history">
+    <h2>BMI Calculation History</h2>
+    <table id="history-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>BMI</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+<!-- Clear Button  -->
+<div class="clear-btn-container">
+  <button id="clear-history-btn">Clear History</button>
+</div>
+</section>
+        <div class="bmi-categories">
+        <section id="underweight">
+            <h2>Underweight</h2>
+            
+            <section>
+                <h3>Explanation</h3>
+                <p>When an individual’s Body Mass Index (BMI) is classified as underweight—meaning it is below 18.5 kg/m²—it suggests that the person’s body weight is too low relative to their height and may not be adequate to maintain optimal health. BMI is a widely used tool to quickly assess whether a person falls within a healthy weight range, and while it doesn’t directly measure body fat, it helps identify potential nutritional or health concerns. Being underweight is not just a cosmetic issue—it can be a sign of underlying health problems or poor nutritional intake that needs medical attention.
+
+                    There are several possible causes of being underweight. These include insufficient calorie intake, chronic illnesses (such as cancer, tuberculosis, diabetes, or hyperthyroidism), mental health conditions like depression or anxiety, and eating disorders such as anorexia nervosa or bulimia. Some individuals have naturally fast metabolisms or genetic factors that contribute to a lower body weight. Additionally, certain medications or treatments—like chemotherapy—can reduce appetite or cause unintentional weight loss. In some cases, socioeconomic factors, such as poverty or lack of access to nutritious food, may also contribute to low body weight.
+                    
+                    The health risks associated with being underweight are serious and wide-ranging. A person with a BMI under 18.5 may be more likely to experience a weakened immune system, making them more vulnerable to infections and illnesses. Nutrient deficiencies—such as low iron, calcium, or vitamin B12—are also common, which can lead to anemia, bone weakness, and fatigue. In women, being underweight can interfere with reproductive health, causing irregular periods or amenorrhea (absence of menstruation), and in extreme cases, infertility. In children and teens, being underweight can impair physical growth, cognitive development, and academic performance.
+                    
+                    There are also psychological and social effects of being underweight. Many people may experience body image concerns, social stigma, low self-esteem, or emotional distress related to their appearance or health. In people with eating disorders, the underweight status is often connected to deeper mental health issues such as obsessive behaviors, anxiety, or distorted perceptions of body image. Chronic fatigue and lack of energy are also common, which can interfere with daily functioning, work, or social life.
+                    
+                    It’s important to recognize that BMI has limitations. While it provides a quick snapshot of someone's weight category, it doesn’t account for muscle mass, body composition, bone density, or fat distribution. For example, someone who is very muscular may have a low or normal BMI and still be healthy, while another person with the same BMI could have poor nutrition or chronic illness. This is why being classified as underweight by BMI should not be considered a diagnosis on its own—it should prompt further medical investigation.
+                    
+                    Addressing underweight status involves a careful, holistic approach. Health professionals usually recommend a full evaluation that may include dietary analysis, medical history, lab tests, and physical exams. Treatment depends on the root cause. If poor nutrition is the issue, a registered dietitian can help create a high-calorie, nutrient-rich meal plan. If the cause is a medical or psychological condition, doctors and mental health professionals may need to work together to treat both the physical and emotional aspects. The goal is to help individuals gain weight in a healthy, sustainable way and improve overall well-being.</p>
+            </section>
+            
+            <section>
+                <h3>Remedies</h3>
+                <p>Remedies for being underweight focus on restoring a healthy body weight through balanced nutrition, lifestyle changes, medical treatment, and emotional support. The first and most important step is identifying the underlying cause of the low weight. Some people may be underweight due to poor eating habits, while others might have health conditions or psychological factors that need attention. Therefore, before starting any remedy, it's essential to consult a healthcare professional for a proper diagnosis and personalized plan.
+
+                    One of the most effective remedies is improving dietary intake in a healthy, structured way. People who are underweight should focus on eating more calorie-dense and nutrient-rich foods rather than just increasing the quantity of food. This means including healthy fats like nuts, seeds, avocados, and olive oil; lean proteins like eggs, poultry, fish, and legumes; and complex carbohydrates such as whole grains, potatoes, and oats. Frequent meals and snacks can also help—eating 5 to 6 smaller meals a day may be easier than trying to eat 3 large ones. Adding smoothies or protein shakes can also boost calorie intake in a nutritious way without feeling too full.
+                    
+                    Gaining weight safely also involves making sure the body gets enough essential nutrients. It's not just about eating more calories—it's about eating the right kind of calories. Including foods high in vitamins and minerals—such as leafy greens, dairy products, fruits, and fortified cereals—ensures that the body builds muscle and bone strength rather than just accumulating fat. In some cases, doctors may recommend vitamin or mineral supplements, especially if the person has deficiencies in nutrients like iron, calcium, or vitamin D.
+                    
+                    Regular physical activity, especially strength training, is another important remedy. While it might seem counterintuitive, exercising—especially resistance exercises like weightlifting—helps build muscle mass rather than just gaining fat. This results in healthier weight gain and improved physical strength. Light cardiovascular exercise can also improve appetite and digestion. It’s important to work with a fitness coach or physical therapist to create a plan suited to an underweight individual’s energy levels and health status.
+                    
+                    For people who are underweight due to medical conditions or eating disorders, treatment must also address the root cause. If someone has a chronic illness, hormone imbalance, or gastrointestinal problem, proper medical treatment is necessary to restore weight and health. In the case of eating disorders like anorexia nervosa or bulimia, psychological therapy and counseling play a critical role. Cognitive Behavioral Therapy (CBT) and support from a mental health professional can help improve body image, develop healthy eating habits, and manage anxiety or emotional triggers related to food and weight.
+                    
+                    Lifestyle changes can also support healthy weight gain. Reducing stress, getting enough sleep, and staying hydrated are key parts of recovery. Stress and lack of sleep can suppress appetite and interfere with digestion. Establishing a regular eating schedule, setting reminders to eat, and surrounding oneself with a supportive environment can all help maintain consistency in eating and self-care. Avoiding habits that reduce appetite—like drinking too much caffeine or skipping breakfast—can also make a big difference.
+                    
+                    In summary, the best remedies for being underweight include a combination of increased calorie intake, nutrient-dense meals, strength-based exercise, medical treatment for any underlying health issues, and mental health support if needed. It’s important to focus on gaining weight gradually and safely, with guidance from professionals like doctors, dietitians, and therapists. The goal is not just to increase the number on the scale, but to improve overall health, energy levels, and quality of life.</p>
+            </section>
+            
+            <section>
+                <h3>Nutrients</h3>
+                <p>Focus on healthy fats like avocados and nuts, complex carbohydrates such as whole grains, and proteins from lean meats, legumes, and dairy to support weight gain.</p>
+            </section>
+        </section>
+    
+        <section id="normal">
+            <h2>Normal</h2>
+            
+            <section>
+                <h3>Explanation</h3>
+                <p>Having a normal BMI (between 18.5 and 24.9) suggests that your body weight is in a healthy range, which lowers the risk of chronic diseases and supports overall well-being.</p>
+            </section>
+            
+            <section>
+                <h3>Remedies</h3>
+                <p>Maintain your current weight by following a balanced diet, staying active with regular exercise, managing stress, and avoiding excessive consumption of junk food.</p>
+            </section>
+            
+            <section>
+                <h3>Nutrients</h3>
+                <p>Include a variety of vegetables, fruits, whole grains and healthy fats to ensure you’re getting all essential vitamins and minerals.</p>
+            </section>
+        </section>
+    
+        <section id="overweight">
+            <h2>Overweight</h2>
+            
+            <section>
+                <h3>Explanation</h3>
+                <p>A BMI between 25 and 29.9 is considered overweight. This can increase the risk of conditions like high blood pressure, heart disease, and type 2 diabetes.</p>
+            </section>
+            
+            <section>
+                <h3>Remedies</h3>
+                <p>Adopt a healthier lifestyle by reducing sugar and refined carbs, staying active for at least 30 minutes daily, and practicing portion control during meals.</p>
+            </section>
+            
+            <section>
+                <h3>Nutrients</h3>
+                <p>Focus on high-fiber foods such as vegetables and legumes, lean proteins like fish and tofu, and stay hydrated while avoiding sugary beverages.</p>
+            </section>
+        </section>
+    
+        <section id="obese">
+            <h2>Obese</h2>
+            
+            <section>
+                <h3>Explanation</h3>
+                <p>A BMI of 30 or above is considered obese. This condition significantly raises the risk for serious health issues, including heart disease, stroke, and metabolic disorders.</p>
+            </section>
+            
+            <section>
+                <h3>Remedies</h3>
+                <p>Obesity can be managed with professional guidance, a structured diet, gradual increases in physical activity, and a strong support system for lifestyle changes.</p>
+            </section>
+            
+            <section>
+                <h3>Nutrients</h3>
+                <p>Prioritize nutrient-dense foods like vegetables and legumes, avoid processed and high-fat meals, and consume adequate protein to help regulate metabolism and satiety.</p>
+            </section>
+        </section>
+        </div>
+    </main>
+    
+      
+</body>
+</html>

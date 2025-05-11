@@ -1,0 +1,344 @@
+/* Logo fixed position */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/* Header */
+header {
+  background: linear-gradient(to right, #388E3C, #4CAF50);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 10px 10px;
+}
+
+header .logo h1 {
+  font-size: 24px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  position: relative;
+}
+
+header nav ul li a:hover {
+  color: #FFEB3B;
+}
+
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #FFEB3B;
+  transition: width 0.3s;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* BMI Section Background */
+.bmi-section-background {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* BMI Calculator */
+.bmi-calculator {
+  background: url('background.jpg') no-repeat;
+  background-size: cover;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  border: 2px solid #FFC107;
+  box-sizing: border-box;
+}
+
+.bmi-calculator h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.bmi-calculator label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 600;
+  color: #444;
+  text-align: left;
+}
+
+.bmi-calculator input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: border 0.3s;
+  box-sizing: border-box;
+}
+
+.bmi-calculator input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+#calculate-bmi-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #43A047, #2E7D32);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+#calculate-bmi-btn:hover {
+  background-color: #1B5E20;
+  transform: scale(1.03);
+}
+
+.bmi-result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.bmi-result span {
+  color: #4CAF50;
+}
+
+/* Specific BMI categories */
+.bmi-categories {
+  display: block;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.bmi-result.underweight {
+  color: #FF9800;
+  background-color: #FFECB3;
+}
+
+.bmi-result.normal {
+  color: #4CAF50;
+  background-color: #C8E6C9;
+}
+
+.bmi-result.overweight {
+  color: #FF5722;
+  background-color: #FFCCBC;
+}
+
+.bmi-result.obese {
+  color: #F44336;
+  background-color: #FFCDD2;
+}
+
+/* BMI History Table */
+.bmi-history {
+  background-image: url('table background.jpg!w700wp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.bmi-history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bmi-history th, .bmi-history td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.bmi-history th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.bmi-history tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.bmi-history tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Table row colors for BMI category */
+.bmi-history tr.underweight td {
+  background-color: #FFEB3B;
+  color: #FF5722;
+}
+
+.bmi-history tr.normal td {
+  background-color: #C8E6C9;
+  color: #4CAF50;
+}
+
+.bmi-history tr.overweight td {
+  background-color: #FFCCBC;
+  color: #FF9800;
+}
+
+.bmi-history tr.obese td {
+  background-color: #FFCDD2;
+  color: #F44336;
+}
+
+/* Clear History Button */
+.clear-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+#clear-history-btn {
+  background-color: #FF5722;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#clear-history-btn:hover {
+  background-color: #D32F2F;
+}
+/* Background color for BMI category section */
+#underweight {
+  background-color: #FFECB3; 
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+#normal {
+  background-color: #C8E6C9; 
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+#overweight {
+  background-color: #FFCCBC; 
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+#obese {
+  background-color: #FFCDD2; 
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #2E7D32;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-top: 4px solid #66BB6A;
+}
+
+footer .logo {
+  position: static;
+  height: 50px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .bmi-section-background {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bmi-calculator,
+  .bmi-history {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .clear-btn-container {
+    justify-content: center;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('https://www.shutterstock.com/image-vector/seamless-pattern-yellow-bananas-pineapples-600nw-418959364.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}

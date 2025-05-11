@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition & Diet</title>
+    <link rel="stylesheet" href="nutrition.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" style="width: 100px; height: 48px;">
+        </div>
+        <nav class="nav-links">
+        <li><a href="../home page/homepage.html">Home</a></li>
+        <li><a href="../excersise/excercise.html">Workouts</a></li>
+        <li><a href="../nutrition/nutrition.html">Nutrition & Diet</a></li>
+        <li><a href="../login page/login.html">login</a></li>
+        <li><a href="../login page/signup.html">Sign Up</a></li>
+        </nav>
+        <div class="menu-toggle">&#9776;</div>
+        <div id="userDisplay" style="margin-right: 20px; font-weight: bold;"></div>
+    </header>
+
+    <main class="content">
+        <section class="hero">
+            <h1>Fuel Your Body Right</h1>
+            <p>Discover healthy meal plans and nutritional tips tailored to your goals.</p>
+            <a href="https://challenge22.com/plant-based-weekly-meal-plan/?gad_source=1&gad_campaignid=15653438048&gbraid=0AAAAAC7IPpuXV9q0zNPDeFWDswmkXQBoe&gclid=Cj0KCQjwlYHBBhD9ARIsALRu09qgWoonaNzcXNMlD8GbDmBv9jp7bpSQuIdGNa4p01DLkFIK4vPGahUaAviIEALw_wcB" class="cta-btn">Start Now</a>
+        </section>
+
+        <section class="plans">
+            <div class="plan-card">
+                <h2>Weight Loss</h2>
+                <p>A low-calorie, nutrient-rich meal plan to help shed pounds safely.</p>
+                <a href="https://www.health.harvard.edu/topics/diet-and-weight-loss" class="btn">View Plan</a>
+            </div>
+            <div class="plan-card">
+                <h2>Muscle Gain</h2>
+                <p>High-protein meals designed for muscle recovery and growth.</p>
+                <a href="https://madmuscles.com/funnel/workout-mealplan/step-goal?utm_source=google_search&utm_medium=177199210281&utm_campaign=22088119414&utm_content=729388395294&device=c&utm_term=meal%20prep%20for%20muscle%20gain&camp_name=&asn=&utm_target=v(bulking)_tm1(bulking)_tm2()&gad_source=1&gad_campaignid=22088119414&gbraid=0AAAAABgcmew8x8b2a4PxidkHV0sThG25v&gclid=Cj0KCQjwlYHBBhD9ARIsALRu09o5gBi0z94C0ZbJMTLjJMts_bWoZOnhk8IzgcECE3Fw2WOvBwMfIq0aAqUKEALw_wcB" class="btn">View Plan</a>
+            </div>
+            <div class="plan-card">
+                <h2>Balanced Lifestyle</h2>
+                <p>A well-rounded diet for everyday wellness and energy.</p>
+                <a href="https://www.healthline.com/health/how-to-maintain-a-healthy-lifestyle" class="btn">View Plan</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 FitNess. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Check if the user is logged in and display their name/email
+        document.addEventListener("DOMContentLoaded", function () {
+            const isLoggedIn = localStorage.getItem("loggedIn");
+
+            if (isLoggedIn === "true") {
+                // If the user is logged in, get their username or email from localStorage
+                const username = localStorage.getItem("username") || "User";  
+                const userDisplay = document.getElementById("userDisplay");
+                userDisplay.textContent = `Welcome, ${username}`;  
+            } else {
+                // If the user is not logged in, display a guest message or sign-up/login options
+                const userDisplay = document.getElementById("userDisplay");
+                userDisplay.textContent = "Welcome, Guest!"; 
+            }
+        });
+        window.addEventListener("load", () => {
+            document.querySelector(".hero").classList.add("animate");
+        });
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        document.querySelectorAll(".plan-card").forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
