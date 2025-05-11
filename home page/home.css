@@ -1,0 +1,152 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* Header and Navigation Bar */
+header {
+  background: linear-gradient(to right, #388E3C, #4CAF50);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 10px 10px;
+}
+
+header .logo h1 {
+  font-size: 24px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  position: relative;
+}
+
+header nav ul li a:hover {
+  color: #FFEB3B;
+}
+
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #FFEB3B;
+  transition: width 0.3s;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Start Section */
+.start {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f4f4f4;
+}
+
+.start h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.start p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.scroll-btn {
+  font-size: 30px;
+  text-decoration: none;
+  color: #4CAF50;
+}
+
+/* Main content sections */
+main section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+main section:nth-child(even) {
+  background-color: #e8f5e9;
+}
+
+/* Hover-triggered emoji trigger (no text) */
+.hover-trigger {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 50px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* Emoji styling */
+.hover-trigger .emoji {
+  font-size: 50px;
+}
+
+/* Ghost coupon box appears to the left of the emoji */
+.ghost-coupon {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 90px; /* Positioned to the left of the emoji */
+  background: white;
+  border: 2px solid #4CAF50;
+  padding: 15px 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  z-index: 9998;
+  text-align: center;
+  width: 250px;
+  border-radius: 8px;
+}
+
+.ghost-coupon p {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ghost-coupon button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.ghost-coupon button:hover {
+  background-color: #388E3C;
+}
