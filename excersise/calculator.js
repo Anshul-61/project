@@ -1,5 +1,4 @@
 if (!localStorage.getItem("userEmail")) {
-  window.location.href = "login.html";
 }
 // Storing values in variables
 const weightInput = document.getElementById('weight');
