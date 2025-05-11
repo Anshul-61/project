@@ -19,7 +19,6 @@
         <li><a href="../login page/signup.html">Sign Up</a></li>
         </nav>
         <div class="menu-toggle">&#9776;</div>
-        <!-- User display -->
         <div id="userDisplay" style="margin-right: 20px; font-weight: bold;"></div>
     </header>
 
@@ -34,17 +33,17 @@
             <div class="plan-card">
                 <h2>Weight Loss</h2>
                 <p>A low-calorie, nutrient-rich meal plan to help shed pounds safely.</p>
-                <a href="weight-loss-plan.html" class="btn">View Plan</a>
+                <a href="https://www.health.harvard.edu/topics/diet-and-weight-loss" class="btn">View Plan</a>
             </div>
             <div class="plan-card">
                 <h2>Muscle Gain</h2>
                 <p>High-protein meals designed for muscle recovery and growth.</p>
-                <a href="muscle-gain-plan.html" class="btn">View Plan</a>
+                <a href="https://madmuscles.com/funnel/workout-mealplan/step-goal?utm_source=google_search&utm_medium=177199210281&utm_campaign=22088119414&utm_content=729388395294&device=c&utm_term=meal%20prep%20for%20muscle%20gain&camp_name=&asn=&utm_target=v(bulking)_tm1(bulking)_tm2()&gad_source=1&gad_campaignid=22088119414&gbraid=0AAAAABgcmew8x8b2a4PxidkHV0sThG25v&gclid=Cj0KCQjwlYHBBhD9ARIsALRu09o5gBi0z94C0ZbJMTLjJMts_bWoZOnhk8IzgcECE3Fw2WOvBwMfIq0aAqUKEALw_wcB" class="btn">View Plan</a>
             </div>
             <div class="plan-card">
                 <h2>Balanced Lifestyle</h2>
                 <p>A well-rounded diet for everyday wellness and energy.</p>
-                <a href="balanced-lifestyle-plan.html" class="btn">View Plan</a>
+                <a href="https://www.healthline.com/health/how-to-maintain-a-healthy-lifestyle" class="btn">View Plan</a>
             </div>
         </section>
     </main>
@@ -66,22 +65,18 @@
 
             if (isLoggedIn === "true") {
                 // If the user is logged in, get their username or email from localStorage
-                const username = localStorage.getItem("username") || "User";  // Default to "User" if no username is found
+                const username = localStorage.getItem("username") || "User";  
                 const userDisplay = document.getElementById("userDisplay");
-                userDisplay.textContent = `Welcome, ${username}`;  // Display the user's name
+                userDisplay.textContent = `Welcome, ${username}`;  
             } else {
                 // If the user is not logged in, display a guest message or sign-up/login options
                 const userDisplay = document.getElementById("userDisplay");
-                userDisplay.textContent = "Welcome, Guest!";  // You can change this to display login/signup links if needed
+                userDisplay.textContent = "Welcome, Guest!"; 
             }
         });
-
-        // Animate hero on load
         window.addEventListener("load", () => {
             document.querySelector(".hero").classList.add("animate");
         });
-
-        // Animate plan cards on scroll
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {

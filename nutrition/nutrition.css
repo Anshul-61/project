@@ -20,8 +20,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #3e8e41; /* Green background for navbar */
-    color: white;
+    background-color: #3e8e41; 
     position: relative;
 }
 
@@ -45,7 +44,7 @@ body {
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #367c39; /* Darker green for hover */
+    background-color: #367c39;
     border-radius: 4px;
     outline: none;
 }
@@ -68,13 +67,13 @@ body {
 .hero {
     text-align: center;
     padding: 5rem 1rem;
-    background-image: url('images/healthy-bg.jpg'); /* Replace with your image path */
+    background-image: url('images/healthy-bg.jpg'); 
     background-size: cover;
     background-position: center;
     color: white;
     position: relative;
     z-index: 1;
-    background-color: #3e8e41; /* Green background color fallback */
+    background-color: #3e8e41;
 }
 
 .hero::before {
@@ -82,26 +81,26 @@ body {
     position: absolute;
     top: 0; left: 0;
     right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* dark overlay */
+    background: rgba(0, 0, 0, 0.4); 
     z-index: -1;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #ffffff; /* White text color for readability */
+    color: #ffffff; 
 }
 
 .hero p {
     font-size: 1.2rem;
-    color: #f1f1f1; /* Light color for text */
+    color: #f1f1f1; 
 }
 
 .cta-btn {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.7rem 1.5rem;
-    background-color: #3e8e41; /* Green background for button */
+    background-color: #3e8e41; 
     color: white;
     border-radius: 5px;
     text-decoration: none;
@@ -112,7 +111,7 @@ body {
 
 .cta-btn:hover,
 .cta-btn:focus {
-    background-color: #367c39; /* Darker green on hover */
+    background-color: #367c39; 
     outline: none;
     transform: scale(1.03);
 }
@@ -126,14 +125,14 @@ body {
 }
 
 .plan-card {
-    background-color: #ffffff; /* White background for plan cards */
+    background-color: #ffffff; 
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
     position: relative;
     overflow: hidden;
-    color: #333; /* Dark text color for readability */
+    color: #333; 
 }
 
 .plan-card::before {
@@ -141,7 +140,7 @@ body {
     position: absolute;
     top: 0; left: 0;
     right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.2); /* Slight dark overlay */
+    background: rgba(0, 0, 0, 0.2); 
     z-index: 0;
 }
 
@@ -152,11 +151,11 @@ body {
 
 .plan-card h2 {
     font-size: 1.6rem;
-    color: #3e8e41; /* Green text color for headings */
+    color: #3e8e41; 
 }
 
 .plan-card p {
-    color: #555; /* Lighter text for descriptions */
+    color: #555; 
 }
 
 .plan-card.animate {
@@ -172,8 +171,7 @@ body {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1.2rem;
-    background-color: #3e8e41; /* Green background for button */
-    color: white;
+    background-color: #3e8e41; 
     border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
@@ -183,7 +181,7 @@ body {
 
 .btn:hover,
 .btn:focus {
-    background-color: #367c39; /* Darker green on hover */
+    background-color: #367c39; 
     outline: none;
     transform: scale(1.03);
 }
@@ -201,7 +199,7 @@ body {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #3e8e41; /* Green background for mobile menu */
+        background-color: #3e8e41; 
         padding: 1rem;
         position: absolute;
         top: 60px;

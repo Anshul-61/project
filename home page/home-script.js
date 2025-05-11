@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let isClicked = false;
 
   hoverTrigger.addEventListener("click", function () {
-    console.log("Hover trigger clicked");  // Debugging
+    console.log("Hover trigger clicked"); 
     if (!isClicked) {
       ghostCoupon.style.display = "block";
       isClicked = true;
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     hoverTrigger.style.display = "none";
     ghostCoupon.style.display = "none";
     localStorage.setItem("loggedIn", "true");
-    localStorage.setItem("userEmail", email);  // Assume the email is available or capture it during login.
+    localStorage.setItem("userEmail", email);  
   });
 
   // Logout functionality
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       logoutBtn.style.display = "none";
 
       // Redirect to home page or login page
-      window.location.href = "../login page/login.html"; // Or wherever you want to redirect
+      window.location.href = "../login page/login.html"; 
     });
   }
 });

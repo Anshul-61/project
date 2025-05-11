@@ -1,5 +1,4 @@
 // Check if user is logged in based on userEmail in localStorage
-// Toggle menu visibility for mobile view
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 menuToggle.addEventListener('click', () => {
@@ -35,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (isLoggedIn && (userName || email)) {
     const userDisplay = document.getElementById("userDisplay");
-    userDisplay.textContent = `👤 ${userName || email}`; // Display either user's name or email
+    userDisplay.textContent = `👤 ${userName || email}`;
   }
 });
 // Storing values in variables
@@ -105,7 +104,6 @@ function calculateBMI() {
   saveHistory(bmi, bmiCategory);
 }
 calculateButton.addEventListener('click', calculateBMI);
-// Load BMI history on page 
 window.onload = loadHistory;
 const clearButton = document.getElementById('clear-history-btn');
 clearButton.addEventListener('click', () => {
