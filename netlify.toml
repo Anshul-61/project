@@ -3,5 +3,5 @@
 
 [[redirects]]
   from = "/"
-  to = "/home page/homepage.html"
+  to = "/home%20page/homepage.html"
   status = 301
