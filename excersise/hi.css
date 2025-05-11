@@ -1,12 +1,8 @@
 /* Logo fixed position */
 .logo {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 99;
-  height: 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
-
 /* Header */
 header {
   background: linear-gradient(to right, #388E3C, #4CAF50);

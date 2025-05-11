@@ -1,152 +1,201 @@
-/* Reset and base styles */
-* {
+/* Page background */
+body {
+  background-image: url('background.jpg'); /* Replace with your background image path */
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: #fff;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  line-height: 1.6;
-}
-
-/* Header and Navigation Bar */
+/* Header styling */
 header {
-  background: linear-gradient(to right, #388E3C, #4CAF50);
-  color: white;
-  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 0 0 10px 10px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
 }
 
-header .logo h1 {
-  font-size: 24px;
+header .logo img {
+  width: 100px;
+  height: 48px;
 }
 
-header nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
+nav ul {
+  list-style-type: none;
   margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-header nav ul li {
+nav ul li {
   margin: 0 15px;
 }
 
-header nav ul li a {
-  color: white;
+nav ul li a {
   text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s;
-  position: relative;
+  color: #fff;
+  font-weight: bold;
 }
 
-header nav ul li a:hover {
-  color: #FFEB3B;
-}
-
-header nav ul li a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
-  background-color: #FFEB3B;
-  transition: width 0.3s;
-}
-
-header nav ul li a:hover::after {
-  width: 100%;
-}
-
-/* Start Section */
+/* Start section styling */
 .start {
   text-align: center;
-  padding: 80px 20px;
-  background-color: #f4f4f4;
+  padding: 50px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 50px 0;
 }
 
 .start h2 {
-  font-size: 36px;
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
 .start p {
-  font-size: 18px;
+  font-size: 1.2rem;
   margin-bottom: 20px;
 }
 
 .scroll-btn {
+  color: #fff;
   font-size: 30px;
   text-decoration: none;
-  color: #4CAF50;
+  display: inline-block;
+  margin-top: 20px;
 }
 
-/* Main content sections */
-main section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-main section:nth-child(even) {
-  background-color: #e8f5e9;
-}
-
-/* Hover-triggered emoji trigger (no text) */
+/* Hover-trigger coupon section */
 .hover-trigger {
   position: fixed;
+  top: 20px;
   right: 20px;
-  bottom: 20px;
-  font-size: 50px;
   cursor: pointer;
-  z-index: 9999;
+  font-size: 30px;
 }
 
-/* Emoji styling */
-.hover-trigger .emoji {
-  font-size: 50px;
-}
-
-/* Ghost coupon box appears to the left of the emoji */
 .ghost-coupon {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 90px; /* Positioned to the left of the emoji */
-  background: white;
-  border: 2px solid #4CAF50;
-  padding: 15px 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  z-index: 9998;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
   text-align: center;
-  width: 250px;
-  border-radius: 8px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: none;
 }
 
-.ghost-coupon p {
-  margin: 0 0 10px 0;
-  font-size: 16px;
+/* Main content section styling */
+main {
+  padding: 50px 20px;
+}
+
+/* Exercise section styling */
+.exercise-section {
+  background-color: #2e3a45;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.exercise-section h2 {
+  color: #ffcc00;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.exercise-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.exercise-section ul {
+  margin-top: 20px;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.exercise-section ul li {
+  margin-bottom: 10px;
+}
+
+.exercise-section a {
+  color: #ffcc00;
   font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.1rem;
 }
 
-.ghost-coupon button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
+/* Nutrition section styling */
+.nutrition-section {
+  background-color: #4b5c6b;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.ghost-coupon button:hover {
-  background-color: #388E3C;
+.nutrition-section h2 {
+  color: #ffcc00;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.nutrition-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.nutrition-section ul {
+  margin-top: 20px;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.nutrition-section ul li {
+  margin-bottom: 10px;
+}
+
+.nutrition-section a {
+  color: #ffcc00;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .start h2 {
+    font-size: 2rem;
+  }
+
+  .start p {
+    font-size: 1rem;
+  }
+
+  .scroll-btn {
+    font-size: 24px;
+  }
+
+  .exercise-section, .nutrition-section {
+    padding: 20px;
+  }
 }

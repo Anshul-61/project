@@ -8,16 +8,19 @@
 </head>
 <body>
     <header class="navbar">
-        <div class="logo"><img src="logo.png" style="width: 100px;height: 48px;"></div>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" style="width: 100px; height: 48px;">
+        </div>
         <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="nutrition.html">Nutrition</a>
-            <a href="workouts.html">Workouts</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+        <li><a href="../home page/homepage.html">Home</a></li>
+        <li><a href="../excersise/excercise.html">Workouts</a></li>
+        <li><a href="../excersise/excercise.html">Nutrition & Diet</a></li>
+        <li><a href="../login page/login.html">login</a></li>
+        <li><a href="../login page/signup.html">Sign Up</a></li>
         </nav>
         <div class="menu-toggle">&#9776;</div>
+        <!-- User display -->
+        <div id="userDisplay" style="margin-right: 20px; font-weight: bold;"></div>
     </header>
 
     <main class="content">
@@ -57,29 +60,42 @@
             navLinks.classList.toggle('active');
         });
 
-       
-    // Animate hero on load
-    window.addEventListener("load", () => {
-        document.querySelector(".hero").classList.add("animate");
-    });
+        // Check if the user is logged in and display their name/email
+        document.addEventListener("DOMContentLoaded", function () {
+            const isLoggedIn = localStorage.getItem("loggedIn");
 
-    // Animate plan cards on scroll
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("animate");
-                observer.unobserve(entry.target);
+            if (isLoggedIn === "true") {
+                // If the user is logged in, get their username or email from localStorage
+                const username = localStorage.getItem("username") || "User";  // Default to "User" if no username is found
+                const userDisplay = document.getElementById("userDisplay");
+                userDisplay.textContent = `Welcome, ${username}`;  // Display the user's name
+            } else {
+                // If the user is not logged in, display a guest message or sign-up/login options
+                const userDisplay = document.getElementById("userDisplay");
+                userDisplay.textContent = "Welcome, Guest!";  // You can change this to display login/signup links if needed
             }
         });
-    }, {
-        threshold: 0.2
-    });
 
-    document.querySelectorAll(".plan-card").forEach(card => {
-        observer.observe(card);
-    });
+        // Animate hero on load
+        window.addEventListener("load", () => {
+            document.querySelector(".hero").classList.add("animate");
+        });
 
+        // Animate plan cards on scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
 
+        document.querySelectorAll(".plan-card").forEach(card => {
+            observer.observe(card);
+        });
     </script>
 </body>
 </html>

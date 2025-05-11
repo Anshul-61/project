@@ -7,21 +7,20 @@
   <link rel="stylesheet" href="home.css">
 </head>
 <body>
-
   <header>
     <div class="logo">
-      <h1>Fitness Hub</h1>
+      <img src="logo.png" alt="Logo" style="width: 100px; height: 48px;">
     </div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#exercise">Workouts</a></li>
-        <li><a href="#nutrition">Nutrition & Diet</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="../home page/homepage.html">Home</a></li>
+        <li><a href="../excersise/excercise.html">Workouts</a></li>
+        <li><a href="../excersise/excercise.html">Nutrition & Diet</a></li>
+        <li><a href="../login page/login.html">login</a></li>
+        <li><a href="../login page/signup.html">Sign Up</a></li>
       </ul>
     </nav>
+    <div id="userDisplay" style="margin-right: 20px; font-weight: bold;"></div>
   </header>
 
   <section class="start">
@@ -30,27 +29,43 @@
     <a href="#main-content" class="scroll-btn">▼</a>
   </section>
 
-  <!-- Hover-triggered ghost coupon (just the emoji) -->
+  <!-- Hover-triggered ghost coupon -->
   <div class="hover-trigger" id="hoverTrigger" title="Click to reveal the coupon!">
     <span class="emoji">🎁</span> 
     <div class="ghost-coupon" id="ghostCoupon" style="display: none;">
-        <img src="coupan.png" alt="Coupon" width="150" height="auto">
+      <img src="coupan.png" alt="Coupon" width="150" height="auto">
       <p>You won a free fitness consultation!</p>
       <button>Claim Now</button>
     </div>
   </div>
 
   <main id="main-content">
-    <section id="exercise">
+    <section id="exercise" class="exercise-section">
       <h2>Exercise</h2>
-      <p>Explore customized workout plans and tips.</p>
-      <a href="exercise.html">Go to Exercise Page</a>
+      <p>
+        Exercise is a critical component of maintaining overall health and wellness. Whether you're looking to lose weight, build muscle, or simply stay fit, a well-rounded fitness plan that includes strength training, cardiovascular exercises, and flexibility work is essential. Below are a few key types of exercises:
+      </p>
+      <ul>
+        <li><strong>Strength Training:</strong> Includes weight lifting, bodyweight exercises like push-ups, squats, and resistance band training.</li>
+        <li><strong>Cardio:</strong> Activities like running, cycling, swimming, or high-intensity interval training (HIIT) that boost heart health.</li>
+        <li><strong>Flexibility & Mobility:</strong> Yoga, Pilates, and stretching exercises help improve flexibility and prevent injuries.</li>
+      </ul>
+      <p>Explore a variety of personalized workout plans tailored to different fitness levels and goals.</p>
+      <a href="../excersise/excercise.html">Go to Exercise Page</a>
     </section>
 
-    <section id="nutrition">
+    <section id="nutrition" class="nutrition-section">
       <h2>Nutrition</h2>
-      <p>Learn about healthy eating and meal plans.</p>
-      <a href="nutrition.html">Go to Nutrition Page</a>
+      <p>
+        Proper nutrition is just as important as exercise in achieving a healthy lifestyle. Eating the right balance of macronutrients (proteins, carbohydrates, and fats) and micronutrients (vitamins and minerals) is key to fueling your body for workouts and daily activities. Here are some general tips for healthy eating:
+      </p>
+      <ul>
+        <li><strong>Eat Whole Foods:</strong> Focus on nutrient-dense foods like vegetables, fruits, whole grains, lean proteins, and healthy fats.</li>
+        <li><strong>Stay Hydrated:</strong> Water is essential for performance, recovery, and overall health. Aim for at least 8 cups a day.</li>
+        <li><strong>Balance Your Macros:</strong> Ensure you are getting a balance of proteins, carbs, and healthy fats for sustained energy.</li>
+      </ul>
+      <p>Discover meal plans, recipes, and nutrition tips to complement your fitness journey.</p>
+      <a href="../nutrition/nutrition.html">Go to Nutrition Page</a>
     </section>
   </main>
 
