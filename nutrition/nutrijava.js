@@ -2,10 +2,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   const isLoggedIn = localStorage.getItem("loggedIn");
 
-  // Simply checks if user is logged in
+  // Simply check if user is logged in
   if (isLoggedIn === "true") {
-    // User is logged in, no action taken yet
+    // User is logged in
   } else {
-    // User is not logged in, no action taken yet
+    // User is not logged in
   }
 });

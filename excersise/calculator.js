@@ -1,5 +1,10 @@
-if (!localStorage.getItem("userEmail")) {
-}
+// Check if user is logged in based on userEmail in localStorage
+document.addEventListener("DOMContentLoaded", function () {
+  if (!localStorage.getItem("userEmail")) {
+  } else {
+  }
+});
+
 // Storing values in variables
 const weightInput = document.getElementById('weight');
 const heightInput = document.getElementById('height');
