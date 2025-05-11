@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | FitNess</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <div class="overlay"></div>
+    <form class="login-form animate">
+      <h2>Welcome Back</h2>
+      <p>Log in to continue your fitness journey</p>
+      <input type="text" placeholder="Username or Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit" class="btn">Login</button>
+      <p class="signup-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </form>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      document.querySelector(".login-form").classList.add("visible");
+    });
+  </script>
+</body>
+</html>
