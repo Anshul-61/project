@@ -71,7 +71,7 @@ header nav ul li a:hover::after {
 
 /* BMI Calculator */
 .bmi-calculator {
-  background: url('https://png.pngtree.com/background/20211215/original/pngtree-cartoon-satellite-ruler-calculator-linear-education-background-picture-image_1458755.jpg') no-repeat;
+  background: url('background.jpg') no-repeat;
   background-size: cover;
   padding: 30px;
   border-radius: 12px;
